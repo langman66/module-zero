@@ -34,14 +34,6 @@
     <DocumentationFile>bin\Release\Abp.Zero.EntityFramework.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Abp.0.5.0.0\lib\net451\Abp.dll</HintPath>
-    </Reference>
-    <Reference Include="Abp.EntityFramework, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Abp.EntityFramework.0.5.0.0\lib\net451\Abp.EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
@@ -89,8 +81,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\aspnetboilerplate\src\Abp.EntityFramework\Abp.EntityFramework.csproj">
+      <Project>{948f0caf-3382-4e03-9a0f-0ddb206fe40d}</Project>
+      <Name>Abp.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\aspnetboilerplate\src\Abp\Abp.csproj">
+      <Project>{2c221d3b-5f54-4c5b-8082-318636415132}</Project>
+      <Name>Abp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Abp.Zero\Abp.Zero.csproj">
-      <Project>{70D916F2-9BFF-43DA-B3F7-3E0655114D48}</Project>
+      <Project>{70d916f2-9bff-43da-b3f7-3e0655114d48}</Project>
       <Name>Abp.Zero</Name>
     </ProjectReference>
   </ItemGroup>
